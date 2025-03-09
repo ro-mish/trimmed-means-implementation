@@ -52,13 +52,13 @@ Number of values trimmed from each end: 5
 Total number of values used in mean: 90
 ```
 
-## [Analysis]
+## Analysis
 As we notice, the trimmed mean is not consistent across both implementations.
 We can deduce that this is likely due to the random number generators that each respective language leverages.
 However, despite the difference in random number generators, there is still an interesting phenomena that
 the mean for both is around 500. They are not too far off, despite using different random number generators.
 
-## [Conclusions]
+## Conclusions
 In summary, we see the following:
 
 - Different random number generators in Go and R produce distinct sequences even with the same seed, leading to different sample data
@@ -73,3 +73,6 @@ In summary, we see the following:
 - The similar final results (appx 500) suggest both implementations are statistically sound, even with different data
 
 This validates that our Go implementation of the trimmed mean algorithm is working as expected, producing statistically meaningful results comparable to the implementation in R.
+
+## Gen AI Disclosure
+Gen AI conversation history for this repo can be found in genAI-usage.txt
